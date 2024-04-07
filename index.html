@@ -9,8 +9,23 @@
 <body>
     <div class="container">
         <div class="content">
-            <h1>САШКА КАКАШКА <span class="emoji">&#128169;</span></h1>
+            <h1 id="header">НИГГЕР КОИН</h1>
+            <h2>Выжимай сок из какашки, чтобы прибавить очки: <span id="counter">0</span></h2>
+            <div class="emoji" id="emoji" onclick="addPoop()">💩</div>
         </div>
     </div>
+
+    <script>
+        let count = 0;
+
+        function addPoop() {
+            count++;
+            document.getElementById('counter').textContent = count;
+            document.getElementById('emoji').classList.add('animated');
+            setTimeout(() => {
+                document.getElementById('emoji').classList.remove('animated');
+            }, 300);
+        }
+    </script>
 </body>
 </html>
